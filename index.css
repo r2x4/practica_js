@@ -1,21 +1,40 @@
-  /* Estilos para que se vea bien en pantallas pequeñas */
-  body {
+/* Estilos para que se vea bien en pantallas pequeñas */
+body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 10px;
     background-color: #f4f4f4;
 }
+
 h1.titulo {
     font-size: 1.5rem;
     text-align: center;
     color: #e62626;
 }
-.contenedor{
+
+.container {
+    display: flex;
+    justify-content: space-between;  /* Para que los contenedores se alineen horizontalmente */
+    align-items: center;
+    height: 60vh;  /* Ajusté la altura del contenedor principal */
+    flex-wrap: wrap;  /* Permite que los elementos se ajusten en pantallas pequeñas */
+    margin-top: 20px;  /* Márgenes ajustados */
+}
+
+.contenedor {
+    height: auto;
     max-width: 300px;
-    margin: auto;
+    margin: 10px;
     background-color: rgb(135, 186, 243);
     padding: 20px;
     border-radius: 10px;
+    box-sizing: border-box;  /* Asegura que el padding no afecte el tamaño */
+}
+
+.left, .right {
+    display: flex;
+    flex-direction: column;
+    width: 100%;  /* Asegura que los elementos ocupen el 100% del ancho disponible */
 }
 
 select, button {
@@ -26,17 +45,32 @@ select, button {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+
 button {
     background-color: #007bff;
     color: white;
     cursor: pointer;
 }
+
 button:hover {
     background-color: #3b9b80;
 }
+
 #resultado {
     font-size: 1.2rem;
     text-align: center;
     margin-top: 20px;
     color: #007bff;
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;  /* Los contenedores se apilan en pantallas pequeñas */
+        margin-top: 20px;  /* Reducir el margen superior */
+    }
+
+    .contenedor {
+        width: 90%;  /* Hacer que los contenedores ocupen más espacio */
+    }
 }

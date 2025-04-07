@@ -1,25 +1,45 @@
 <!DOCTYPE html>
-<html lang="en-es">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>practica_js</title>
+    <title>Practica JS</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="./Imagen/672761.png" type="image/x-icon">
 </head>
 <body>
-    <h1 class="titulo">Selecciona tu materia Favorita</h1>
-    <div class="contenedor">
-    <select name="" id="selector-materia">
-        <option value="Matematicas">Matematicas</option>
-        <option value="Fisica">Fisica</option>
-        <option value="Quimica">Quimica</option>
-        <option value="Historia">Historia</option>
-        <option value="Programacion">Programacion</option>
-    </select>
-    <button onclick="mostrarMateria()">Materia Seleccionada</button>
-</div>
+    <section class="container">
+        <div class="contenedor">
+            <h1 class="titulo">Selecciona tu materia Favorita</h1>
+            <div class="left">
+                <select name="" id="selector-materia-left">
+                    <option value="Matematicas">Matematicas</option>
+                    <option value="Fisica">Fisica</option>
+                    <option value="Quimica">Quimica</option>
+                    <option value="Historia">Historia</option>
+                    <option value="Programacion">Programacion</option>
+                </select>
+                <button onclick="mostrarMateria('left')">Materia Seleccionada</button>
+            </div>
+        </div>
+
+        <div class="contenedor">
+            <h1 class="titulo">Selecciona tu materia Favorita</h1>
+            <div class="left">
+                <select name="" id="selector-materia-right">
+                    <option value="Matematicas">Matematicas</option>
+                    <option value="Fisica">Fisica</option>
+                    <option value="Quimica">Quimica</option>
+                    <option value="Historia">Historia</option>
+                    <option value="Programacion">Programacion</option>
+                </select>
+                <button onclick="mostrarMateria('right')">Materia Seleccionada</button>
+            </div>
+        </div>
+    </section>
+
     <p id="resultado"></p>
+
     <script src="index.js"></script>
-    
 </body>
 </html>
